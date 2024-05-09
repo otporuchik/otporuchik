@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello world!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="main-header">
+            <img width="64px" height="54px" src="./main-header/img/mobile-logo.svg" class="main-header__logo" alt="">
+            <p class="main-header__title">Game Name</p>
+            <button class="main-header__options"><span class="visually-hidden">options</span></button>
+        </header>
+        <div class="game-field">
+            <h1 class="visually-hidden">Match numbers and their text definition</h1>
+            <section class="game-settings">
+                <h2 class="game-settings__title visually-hidden">Game settings</h2>
+                <label class="game-settings__input10 game-settings__radio-selector">
+                    0...10
+                    <input type="radio" class="inputBaseLimit radioLimitInput visually-hidden" name="numberRangeSetting" value="0,10" checked>
+                    <span class="customRadioLimitInput"></span>
+                </label>
+                <label class="game-settings__input19 game-settings__radio-selector">
+                    11...19
+                    <input type="radio" class="inputToistaLimit radioLimitInput visually-hidden" name="numberRangeSetting" value="11,19">
+                    <span class="customRadioLimitInput"></span>
+                </label>
+                <label class="game-settings__inputMan game-settings__radio-selector">
+                    manual
+                    <input type="radio" class="inputManualLimit radioLimitInput visually-hidden" name="numberRangeSetting" value="-1">
+                    <span class="customRadioLimitInput"></span>
+                </label>
+                <label class="game-settings__inputMan-label">
+                    Min
+                    <input type="number" class="imputManLimit" id="inputFirstLImit" name="numberRangeManualSetting">
+                </label>
+                <label class="game-settings__inputMan-label">
+                    Max
+                    <input type="number" class="imputManLimit" id="inputSecondLimit" name="numberRangeManualSetting">
+                </label>
+                <div class="game-settings__result-image">
+                    <img width="107px" height="73px" src="./game-settings/result_await.svg" alt="">
+                </div>
+                <div class="game-settings__start-game-div">
+                    <button type="button" class="game-settings__start-game-button">Start new game</button>
+                </div>
+            </section>
+            <section class="game-unmatched-items">
+                <h2 class="visually-hidden">Game items to be matched</h2>
+                <ul class="key-list unmatched-list"></ul>
+                <ul class="value-list unmatched-list"></ul>
+            </section>
+            <section class="game-matched-items">
+                <ul class="matched-list"></ul>
+            </section>
+        </div>
+        <footer class="main-footer">
+            <p class="main-footer__title">Footer</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
