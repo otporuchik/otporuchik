@@ -185,8 +185,6 @@ let callUnMatch = function () {
 
 let keyList = document.querySelector('.key-list');
 let valueList = document.querySelector('.value-list');
-let keys = keyList.children;
-let values = valueList.children;
 
 //remove children from given list
 let cleanList = function(listName) {
@@ -234,13 +232,14 @@ let startGame = function () {
         }
 
         //shuffling numbers in lists
-        for (let i = keys.length; i >= 0; i--) {
-            keyList.appendChild(keyList.children[Math.random() * i | 0]);
+        let shuffleList = function(list) {
+            for (let i = list.children.length; i >= 0; i--) {
+                list.appendChild(list.children[Math.random() * i | 0]);
+            }
         }
 
-        for (let i = values.length; i >= 0; i--) {
-            valueList.appendChild(valueList.children[Math.random() * i | 0])
-        }
+        shuffleList(keyList);
+        shuffleList(valueList);
         
         //adding eventListeners to numbers to interact with user
 
